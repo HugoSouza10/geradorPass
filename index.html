@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Gerador de Senha!</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Precisa de uma senha? Experimente o gerador de senhas fortes do 1Password.</h1>
+        <p>Gere senhas aleatórias seguras para ficar seguro online.</p>
+        <div class="result">
+            
+        </div>
+
+        <div class="contentOption" >
+            <select id="optionGerator">
+                <option value="1">Senha Aleatória</option>
+                <option value="2">Senha Fácil de memorizar</option>
+                <option value="3">Pin</option>
+            </select>
+            <button id="update"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#FFF" fill-rule="evenodd" d="M17.94 10a1 1 0 01.984 1.181C18.344 15.593 14.57 19 10 19a8.98 8.98 0 01-6.844-3.155L1 18v-6h6l-2.424 2.425a7.002 7.002 0 0012.353-3.424L16.94 11a1 1 0 011-1zM1.055 9l.009-.077a.894.894 0 01.012-.104C1.656 4.407 5.43 1 10 1a8.983 8.983 0 016.845 3.156L19 2v6h-6l2.425-2.424A7.004 7.004 0 003.07 9h-.01a1 1 0 01-2 0z"/></svg></button>
+            <button id="copy">Copiar</button>
+        </div>
+        
+
+        <div class="boxGeration">
+            <input oninput="rangeInput(this.value)" id="size" type="range" min="5"  max="100" value="50" class="slider" id="myRange"><span id="displayGerator">0</span>
+            <input type="checkbox"><span>Numeros</span>
+            <input type="checkbox"><span>Símbolos</span>
+        </div>
+
+        <div id="transfer">
+            <label>Cole Aqui sua senha </label>
+            <textarea>
+
+            </textarea>
+        </div>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!--QUANDO VOCÊ COLOCAR O JS EM PRIMEIRO ELE É EXECUTADO PRIMEIRO E VOCÊ VAI CONSEGUIR PEGAR INFORMAÇÕES-->

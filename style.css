@@ -1,0 +1,146 @@
+body{
+    margin:0px;
+    padding: 0px;
+    background-color: #0a2d4d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.container h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.container p{
+    color:#fff;
+}
+
+.container .result{
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+}
+
+.container select{
+    padding: 10px;
+    border: 1px solid #3b5770;
+    border-radius: 20px;
+    color: #fff;
+    background: none;
+}
+
+.container option{
+    color: #000;
+}
+
+.container .boxGeration{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    color: #fff;
+    height: 60px;
+    margin-top: 10px;
+    background-color: #0a253c;
+}
+
+
+/*OPÇÕES*/
+
+.contentOption button{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.contentOption button svg:hover{
+    transform: rotate(100deg);
+    transition: 0.5s ease-in-out;
+}
+
+
+#copy{
+    padding: 10px;
+    background-color: #0572ec;
+    color: #fff;
+    border-radius: 20px;
+}
+
+#copy:hover{
+    background-color: #2278c4;
+}
+
+
+/*ÁREA DE OPÇÕES */
+
+.contentOption {
+    display: flex;
+    align-items: center;
+}
+
+.contentOption select, #update, #copy{
+    flex: 50%;
+}
+
+
+
+
+
+/*ÁREA DE TRANSFERÊNCIA */
+
+#transfer {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#transfer label  {
+    margin-bottom: 20px;
+}
+
+
+#transfer textarea{
+    height: 100px;
+    outline: none;
+}
+
+
+
+/*RESPONSIVO*/
+
+
+@media (max-width: 600px){
+    .container{
+        width: 80%;
+        
+    }
+
+    .container h1{
+        font-size: 20pt;
+    }
+
+    .contentOption{
+        align-items: inherit;
+        flex-direction: column;
+    }
+
+    button#update{
+        margin: 10px;
+    }
+}
