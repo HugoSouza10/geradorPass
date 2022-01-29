@@ -25,7 +25,7 @@ O projeto gerador de senha é um projeto bem interessante construído totalmente
 
 ### ✍️  **Processo de criação:**
 
-O processo de criação do projeto foi da seguinte forma: Pensei em criar um array de possibilidades contendo todas as letras de A até Z e também contendo número e símbolos, conforme você escolhe sua senha, o programa embaralha o array e gera uma nova senha baseada em função de gerar senha. Para mais saber mais baixe o projeto. 😄
+O processo de criação do projeto foi da seguinte forma: Pensei em criar um array de possibilidades contendo todas as letras de A até Z e também contendo número e símbolos, conforme você escolhe sua senha, o programa embaralha o array e gera uma nova senha baseada na função de gerar senha. Para saber mais, baixe o projeto. 😄
 
 
 ### ✍️  **Como instalar o projeto?:**
