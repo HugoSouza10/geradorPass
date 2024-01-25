@@ -4,10 +4,10 @@
 let sizeInput = document.querySelector('#size');
 let displayRange = document.querySelector('#displayGerator');
 let result = document.querySelector('.result');
-let valueDefault = sizeInput.value;
+let valueDefault = 50;
 let valueCurrent;
 let newPass;
-let memorizesEasy = sizeInput.min;
+let memorizesEasy = 5;
 
 let update = document.querySelector('#update');
 let optionGerator = document.querySelector('#optionGerator');
@@ -28,6 +28,8 @@ let copyButtun = document.querySelector('#copy');
    '_$', '$%', '%', '['
 ]
 
+let arrayPossOriginal = [...arrayPoss];
+
 
 
 copyButtun.addEventListener('click',()=>{
@@ -37,39 +39,39 @@ copyButtun.addEventListener('click',()=>{
 })
 
 
+
 optionGerator.addEventListener('change',(event)=>{
       let opPass = parseInt(event.target.value);
+      if(opPass == 1) {
+         clearcreen();
+         valueCurrent = valueDefault;  
+         displayRange.innerHTML = valueCurrent; 
+         renderPass(valueCurrent);
+      }
 
-      console.log(opPass)
+      if(opPass == 2) {
+         valueCurrent = memorizesEasy;
+         renderPass(valueCurrent);
+         displayRange.innerHTML = memorizesEasy;
+      }
 
-      switch (opPass) {
-         case 1:
-            clearcreen();
-            valueCurrent = valueDefault;  
-            displayRange.innerHTML = valueCurrent; 
-            renderPass(valueDefault);
-            break;
-
-         case 2:
-            valueCurrent = memorizesEasy;
-            renderPass(memorizesEasy);
-            displayRange.innerHTML = memorizesEasy;
-            break;  
-
-         case 3:
-            console.log('você selecionou a 3 opção!');
-            break;  
-      
-         default:
-            break;
-      } 
+      if(opPass == 3) {
+         clearcreen();
+         valueCurrent = memorizesEasy;
+         let numeros = arrayPoss.filter(item => /\d/.test(item));
+         arrayPoss = numeros;
+         console.log(numeros);
+         renderPass(valueCurrent);
+         displayRange.innerHTML = valueCurrent;
+      } else {
+         arrayPoss = [...arrayPossOriginal];;
+      }
 
 });
 
 
 
 checkSelected.forEach((item)=>{
-    let arrayPossOriginal = [...arrayPoss];
      item.addEventListener('change',()=>{
         if(item.checked){ 
            if(item.value == 'removeNumeros'){ 
@@ -86,18 +88,12 @@ checkSelected.forEach((item)=>{
            } 
         }else {
          arrayPoss = [...arrayPossOriginal];
-         console.log(arrayPoss);
         }
      
         clearcreen();
         generateDefault(valueCurrent, arrayPoss);
      })
 })
-
-
-let geratePin = (element) => {
-   
-}
 
 
 let defaultUpdate = window.onload = ()=>{
@@ -140,20 +136,25 @@ function rangeInput(value){
 //FUNÇÃO GERAR SENHA 
 
 function renderPass(value){
+   console.log(value)
     if(value == valueDefault ){
        generateDefault(value, arrayPoss);
 
-    }else{
-       if(value>valueDefault || value<valueDefault){
-         clearPass(value);
-          result.innerHTML = newPass;
-          generateRandom(value, arrayPoss);
-          
-       }
     }
+    if(value>valueDefault || value<valueDefault){
+       clearPass(value);
+       result.innerHTML = newPass;
+       generateRandom(value, arrayPoss);
+    }
+
+    if(value < valueDefault) {
+      clearPass(value);
+      result.innerHTML = newPass;
+      generateRandom(value, arrayPoss);
+    }
+
+    
 }
-
-
 
 
 function generateDefault(value, arrayPoss){
@@ -186,30 +187,17 @@ function generateDefault(value, arrayPoss){
 
 
 function generateRandom(value, arrayPoss){
-
-   let randomLetter = true;
-
-   console.log(value);
-
    for(let i = 0; i<value; i++){
-
       let randomOne = '';
       let newPass = '';
       let numberRandomPoss = Math.floor(Math.random() * arrayPoss.length);
+      // Aqui estamos sorteando uma posição de algum caracter.
 
-      if(randomLetter == true){
-         randomOne = arrayPoss[numberRandomPoss];
-         newPass+=randomOne;
-         result.append(newPass);
-         randomLetter = false;
-      }else{
-         randomOne = arrayPoss[numberRandomPoss];
-         newPass+=randomOne.toLocaleLowerCase();
-         result.append(newPass);
-         randomLetter = true;
-      }
+      //Aqui a gente gera o caracter
+      randomOne = arrayPoss[numberRandomPoss];
+      newPass+=randomOne;
+      result.append(newPass);
       
-     
    }
 }
 
