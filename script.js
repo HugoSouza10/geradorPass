@@ -5,15 +5,15 @@ let sizeInput = document.querySelector('#size');
 let displayRange = document.querySelector('#displayGerator');
 let result = document.querySelector('.result');
 let valueDefault = sizeInput.value;
+let valueCurrent;
+let newPass;
+let memorizesEasy = sizeInput.min;
+
 let update = document.querySelector('#update');
 let optionGerator = document.querySelector('#optionGerator');
 let checkSelected = document.querySelectorAll('.boxGeration input[type="checkbox"]');
 let copyButtun = document.querySelector('#copy');
 
-
- let valueCurrent; 
- let newPass;
- let memorizesEasy = sizeInput.min;
 
 
  let arrayPoss = [
@@ -44,18 +44,21 @@ optionGerator.addEventListener('change',(event)=>{
 
       switch (opPass) {
          case 1:
-            result.innerHTML = '';
+            clearcreen();
             valueCurrent = valueDefault;  
             displayRange.innerHTML = valueCurrent; 
             renderPass(valueDefault);
             break;
 
          case 2:
-            result.innerHTML = '';
             valueCurrent = memorizesEasy;
             renderPass(memorizesEasy);
             displayRange.innerHTML = memorizesEasy;
-            break;   
+            break;  
+
+         case 3:
+            console.log('você selecionou a 3 opção!');
+            break;  
       
          default:
             break;
@@ -66,7 +69,7 @@ optionGerator.addEventListener('change',(event)=>{
 
 
 checkSelected.forEach((item)=>{
-    let arrayOriginal = [];
+    let arrayPossOriginal = [...arrayPoss];
      item.addEventListener('change',()=>{
         if(item.checked){ 
            if(item.value == 'removeNumeros'){ 
@@ -76,13 +79,17 @@ checkSelected.forEach((item)=>{
            });
                
            }else{
-               arraySemLetras = arrayPoss.filter(element => {
+               arrayPoss = arrayPoss.filter(element => {
                   return /^[a-zA-Z0-9]+$/.test(element);
                });
                console.log('Removendo Símbolos');
-           }   
+           } 
+        }else {
+         arrayPoss = [...arrayPossOriginal];
+         console.log(arrayPoss);
         }
      
+        clearcreen();
         generateDefault(valueCurrent, arrayPoss);
      })
 })
@@ -105,16 +112,21 @@ let defaultUpdate = window.onload = ()=>{
 
 
 update.addEventListener('click',()=>{
-   result.innerHTML = '';
+   clearcreen();
    defaultUpdate();
 });
 
 
 function clearPass(value){
+   console.log(value)
    for(let i = 0; i<value; i++){
       newPass = '';
    }
   
+}
+
+function clearcreen() {
+   result.innerHTML = '';
 }
 
 
