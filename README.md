@@ -1,6 +1,7 @@
 # PROJETO GERADOR DE SENHA
 
-[(https://user-images.githubusercontent.com/51915862/145726022-ae049c1e-add4-4c5f-b584-91c64290ec11.mp4)](https://github.com/HugoSouza10/geradorPass/issues/1#issue-1077884051)](https://user-images.githubusercontent.com/51915862/145726022-ae049c1e-add4-4c5f-b584-91c64290ec11.mp4)
+![image](https://github.com/HugoSouza10/geradorPass/assets/51915862/7d134608-8e5f-4d4f-9c9d-70d56d1567c6)
+
 
 ## ✍️ Descrição
 
