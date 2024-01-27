@@ -3,8 +3,9 @@
 ![image](https://github.com/HugoSouza10/geradorPass/assets/51915862/7d134608-8e5f-4d4f-9c9d-70d56d1567c6)
 
 
-**Link do projeto:**  
-[Gerador de Senha](https://hugosouza10.github.io/geradorPass/)
+# Gerador de Senhas em JavaScript 🛠️
+
+![Imagem do Projeto](URL_DA_IMAGEM)
 
 ## Descrição
 
@@ -25,7 +26,7 @@ Bem-vindo ao Gerador de Senhas em JavaScript! Este projeto consiste em um gerado
 
 - Arraste o controle deslizante para gerar senhas com até 50 caracteres, independentemente das opções selecionadas.
 
-### Copiar a Senha
+### Copiar a Senha 📋
 
 - Após gerar a senha desejada, utilize a opção "Copiar Senha" para copiá-la para a área de transferência.
 
@@ -47,6 +48,15 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull r
 - JavaScript
 - HTML5
 - CSS3
+
+## Status do Projeto
+
+O projeto está funcional e estável, mas sempre há espaço para melhorias. Fique à vontade para experimentar e contribuir!
+
+## Licença
+
+Este projeto está licenciado sob a [Sua Licença](URL_DA_LICENCA).
+
 
 
 
