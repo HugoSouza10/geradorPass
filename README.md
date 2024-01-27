@@ -5,7 +5,7 @@
 
 # Gerador de Senhas em JavaScript 🛠️
 
-![Imagem do Projeto](URL_DA_IMAGEM)
+[![Imagem do Projeto](URL_DA_IMAGEM)](https://hugosouza10.github.io/geradorPass/)
 
 ## Descrição
 
