@@ -1,41 +1,36 @@
+# PROJETO GERADOR DE SENHA
 
+![Projeto Gerador de Senha](https://user-images.githubusercontent.com/51915862/145726022-ae049c1e-add4-4c5f-b584-91c64290ec11.mp4)
 
+## ✍️ Descrição
 
+O projeto Gerador de Senha é uma construção interessante totalmente desenvolvida em JavaScript, compreendendo vários mecanismos de geração de senha. Este projeto foi inspirado no gerador de senha chamado 1password.
 
-### PROJETO GERADOR DE SENHA
+## 💻 Tecnologias
 
-https://user-images.githubusercontent.com/51915862/145726022-ae049c1e-add4-4c5f-b584-91c64290ec11.mp4
-
-
-### ✍️**Descrição:**
-
-O projeto gerador de senha é um projeto bem interessante construído totalmente em Java script na qual consiste em vários mecanismo de geração de senha.  Esse projeto foi inspirado no gerador de senha chamado 1password.
-
-### 💻  **Tecnologias:**
-
--   HTML 5
--   CSS3
--   JS
+- HTML5
+- CSS3
+- JavaScript
 
 **Link do projeto:**  
-   https://hugosouza10.github.io/geradorPass/
+[Gerador de Senha](https://hugosouza10.github.io/geradorPass/)
 
-🎯 **Objetivo:**  Bem, o objetivo desse projeto foi treinar várias habilidades fundamentais do js como array, funções, variáveis, métodos de array e muito outras habilidades. Ele é um projeto que está em fase de construção na qual ainda vou colocar mais funcionalidades e melhorar ainda mais o código.
+## 🎯 Objetivo
 
+O objetivo deste projeto foi treinar várias habilidades fundamentais do JavaScript, como manipulação de arrays, funções, variáveis, métodos de array e muitas outras habilidades. Ele está em fase de construção, e ainda serão adicionadas mais funcionalidades e melhorias no código.
 
-### ✍️  **Processo de criação:**
+## ✍️ Processo de Criação
 
-O processo de criação do projeto foi da seguinte forma: Pensei em criar um array de possibilidades contendo todas as letras de A até Z e também contendo número e símbolos, conforme você escolhe sua senha, o programa embaralha o array e gera uma nova senha baseada na função de gerar senha. Para saber mais, baixe o projeto. 😄
+O projeto foi concebido da seguinte forma: pensei em criar um array de possibilidades contendo todas as letras de A até Z, números e símbolos. Conforme você escolhe sua senha, o programa embaralha o array e gera uma nova senha com base na função de geração de senha. Para obter mais detalhes, baixe o projeto. 😄
 
+## ✍️ Como Instalar o Projeto?
 
-### ✍️  **Como instalar o projeto?:**
+O projeto é bastante simples. Você pode cloná-lo usando o comando `git clone` para baixar todos os arquivos de uma vez.
 
-É um projeto muito simples na qual você pode fazer o clone do projeto usando o comando git clone, você baixa todos os arquivos do projeto de uma só vez.
+## 📚 Bibliotecas
 
-### 📚**Bibliotecas:**
+Este projeto não utiliza nenhuma biblioteca externa; tudo foi desenvolvido com a linguagem pura.
 
-Este projeto não tem nenhuma biblioteca, foi tudo criado com a linguagem pura mesma.
+**Status do Projeto:**
 
-**Status do projeto:**
-
-Projeto 70% concluído inclusive está hospedado no git page para teste. 
+O projeto está 70% concluído e já está hospedado no GitHub Pages para testes.
